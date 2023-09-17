@@ -8,5 +8,11 @@ test_that("lib_summary returns expected result", {
 })
 
 test_that("lib_summary fails appropriately",{
-  expect_error(libsummary("foo"))
+  expect_error(libsummary("foo"),"'sizes' must be TRUE or FALSE.")
+})
+
+test_that("sizes argument works",{
+  res <-libsummary(sizes=TRUE)
+  expect_equal(names(res),c("library", "n_packages","lib_size"))
+  expect_type(res$lib_size,"double")
 })

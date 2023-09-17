@@ -4,6 +4,8 @@
 # libminer
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/kbirson/libminer/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/kbirson/libminer/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of libminer is to …
@@ -26,9 +28,14 @@ This is a basic example which shows you how to solve a common problem:
 library(libminer)
 
 libsummary()
-#>                                          library n_packages
-#> 1             C:/Program Files/R/R-4.3.1/library         30
-#> 2 C:/Users/kbirs/AppData/Local/R/win-library/4.3         98
+#>                                                                 library
+#> 1                                    C:/Program Files/R/R-4.3.1/library
+#> 2                        C:/Users/kbirs/AppData/Local/R/win-library/4.3
+#> 3 C:/Users/kbirs/AppData/Local/Temp/Rtmp4u9Op7/temp_libpath4ad42af04828
+#>   n_packages
+#> 1         30
+#> 2         98
+#> 3          1
 #also can calculate sizes
 #libsummary( sizes = TRUE)
 ```

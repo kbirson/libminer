@@ -1,5 +1,5 @@
 test_that("lib_summary returns expected result", {
-  res <- lib_summary() #call function
+  res <- libsummary() #call function
   expect_s3_class(res, "data.frame") #should return a df
   expect_equal(ncol(res),2) #should have 2 cols
   expect_equal(names(res),c("Library", "n_packages"))
@@ -8,5 +8,5 @@ test_that("lib_summary returns expected result", {
 })
 
 test_that("lib_summary fails appropriately",{
-  expect_error(lib_summary("foo"))
+  expect_error(libsummary("foo"))
 })
